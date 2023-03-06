@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+
+<body>
+    <!-- Nav  -->
+    <%- include('../partials/nav') %>
+        <div class="container mt-3">
+            <div class="row">
+                <!-- Col Md 3 -->
+                <div class="col-md-3">
+
+                    <%- include('../partials/category-menu.ejs',categories) %>
+
+                </div>
+                <!-- Col Md 9 -->
+                <div class="col-md-9">
+                    <h1 class="h3 mb-3">
+                        <%= title %>
+                    </h1>
+                    <!-- Card Body  -->
+
+                    <% blogs.forEach(blog=> { %>
+                        <!-- Loop Started -->
+                        <% if (blog.anasayfa && blog.postOK) { %>
+
+                            <%- include('../partials/blog-card',blog) %>
+                        <% } %>
+                                    <!-- Loop Ended -->
+                    <% }) %>
+                                        <!--Card Body End-->
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
