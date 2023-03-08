@@ -19,13 +19,9 @@
                 </h1>
                 <!-- Card Body  -->
                 <% blogs.forEach(blog=> { %>
-                    <% if (blog.postOK) { %>
-                     
+                    
                         <%- include('../partials/blog-card',blog) %>
-
-                        <% } %>
-
-                    <% }) %>
+                <% }) %>
                         <!--Card Body End-->
                         <!-- Pagination -->
                         <% if (blogs.filter(blog => blog.postOK).length > 3) { %>

@@ -24,14 +24,9 @@
                     <!-- Card Body  -->
 
                     <% blogs.forEach(blog=> { %>
-                        <!-- Loop Started -->
-                        <% if (blog.anasayfa && blog.postOK) { %>
-
-                            <%- include('../partials/blog-card',blog) %>
-                        <% } %>
-                                    <!-- Loop Ended -->
+                        <%- include('../partials/blog-card',blog) %>
                     <% }) %>
-                                        <!--Card Body End-->
+                                <!--Card Body End-->
                 </div>
             </div>
         </div>
