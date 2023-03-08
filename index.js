@@ -9,6 +9,7 @@ const adminRoutes = require('./routes/admin');
 
 
 app.set("view engine", "ejs");
+app.use(express.urlencoded({extended:false}));
 // Node modules i erişime açtık . Temsilen /libs diye bir mahlas kullandık.
 app.use("/libs",express.static(path.join(__dirname,"node_modules")));
 app.use("/static",express.static(path.join(__dirname,"public")));
